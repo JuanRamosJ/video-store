@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video's 4 Less</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="nav">
+        <div id="nav-container">
+            <h1>Video<span>4</span>Less</h1>
+            <div class="nav-links">
+                <select name="currency" id="currency" onchange="myFunction(), myFunction1(), myFunction2(),myFunction3(),myFunction4()">
+                    <option value="" id="USD">USD $</option>
+                    <option value="" id="Eur">Euro €</option>
+                    
+                </select>
+                <a href=""><img src="images/cart-light.png" alt="cart-logo"></a>
+                <a href="" id="cart">0</a>
+                <a href=""><img src="images/search-light.png" alt="search-logo"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h2>Recently Purchased Movies:</h2>
+        <div class="top-half">
+            <div class="pic-wheel">
+                <input type="image" src="images/chevron-left.png" alt="left click" name="click left" onclick="pickDK()">
+                <img src="images/dark-knight.jpg" alt="dark knight cover" id=game-wheel>
+                <input type="image" src="images/chevron-right.png" alt="right click" name="click right" onclick="pickAvengers()">
+            </div>
+        
+            <div class="wheel-lines">
+                <div class="line"></div>
+                <div class="line" id="colored"></div>
+                <div class="line" id="uncolored"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <img src="images/dark-knight.jpg" alt="the dark knight cover">
+                <p class="title">The Dark Knight</p>
+                <div class="icons">
+                    <a href=""><img src="images/dvd.jpg" alt="dvd logo"></a>
+                    <a href=""><img src="images/bluray.png" alt="bluray logo"></a>
+                </div>
+                <div class="buy-bar">
+                    <button class="percent" type="button" disabled>-20%</button>
+                    <div class="price">
+                        <p>
+                            <span class="old" id="price1">$14.99</span>
+                            <span class="new" id="price2">$11.99</span>
+                        
+                        </p>
+                    </div> 
+                    <button onclick="addCart()">Buy</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/avatar.png" alt="Avatar cover">
+                <p class="title">Avatar</p>
+                <div class="icons">
+                    <a href=""><img src="images/dvd.jpg" alt="dvd logo"></a>
+                    <a href=""><img src="images/bluray.png" alt="bluray logo"></a>
+                </div>
+                <div class="buy-bar">
+                    <button class="percent" type="button" disabled>-10%</button>
+                    <div class="price">
+                        <p>
+                            <span class="old" id="price3">$9.99</span>
+                            <span class="new" id="price4">$8.99</span>
+                        </p>
+                    </div>
+                    <button onclick="addCart()">Buy</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/avengers.jpeg" alt="avengers endgame cover">
+                <p class="title">Avengers: Endgame</p>
+                <div class="icons">
+                    <a href=""><img src="images/dvd.jpg" alt="dvd logo"></a>
+                    <a href=""><img src="images/bluray.png" alt="bluray logo"></a>
+                    <a href="" id="download" onclick="digitalAlert()"><img src="images/digital.png" alt=""></a>
+                </div>
+                <div class="buy-bar">
+                    <button class="percent" type="button" disabled>NEW</button>
+                    <div class="price">
+                        <p class="new" id="price5">$19.99</p>
+                    </div>
+                    <button onclick="addCart()">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
